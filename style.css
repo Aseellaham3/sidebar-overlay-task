@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7f7f8;
+}
+.container {
+  width: calc(100% - 200px);
+  margin: auto;
+  padding: 20px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header img {
+  height: 40px;
+  width: auto;
+}
+header .container .row ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  list-style: none;
+  padding: 10px 14px;
+}
+a {
+  text-decoration: none;
+  color: rgb(54, 47, 47);
+}
+button {
+  border: none;
+}
+.search {
+  width: 600px;
+  border-radius: 8px;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px;
+}
+.btn .signUp {
+  background-color: #ff9500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: white;
+}
+.btn .login {
+  padding: 10px 14px;
+  border: 1px solid #ff9500;
+  border-radius: 8px;
+}
+.menu {
+  background-color: #ff9500;
+  width: 400px;
+  height: 730px;
+  align-items: center;
+  padding: 50px;
+  position: absolute;
+  top: 0;
+  left: -400px;
+  z-index: 999;
+}
+.show-menu {
+  animation: showMenu 1s ease-in-out 1 forwards;
+  -webkit-animation: showMenu 1s ease-in-out 1 forwards;
+}
+.hide-menu {
+  animation: hideMenu 1s ease-in-out 1 forwards;
+  -webkit-animation: hideMenu 1s ease-in-out 1 forwards;
+}
+@keyframes showMenu {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes hideMenu {
+  from {
+    left: 0;
+  }
+  to {
+    left: -400px;
+  }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+.menu-list li {
+  list-style: none;
+  font-size: 20px;
+}
+.menu-list li a {
+  color: white;
+}
+
+.menu svg {
+  width: 15px;
+  height: 15px;
+}
+
+.display-none {
+    
+  display: none;
+}
+.overlay {
+background-color: rgba(0, 0, 0, 0.774); /* تعيين لون الغطاء وتعتيمه */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: auto; /* تأكد من أن الغطاء فوق كل شيء آخر */
+  display: block;
+}
+
+.x-button {
+  display: flex;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: #ff9500;
+  margin-left: 300px;
+}
